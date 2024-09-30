@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
         toprecycler=view.findViewById(R.id.toprecycler);
           showData();
 
-        // See all  code. here................................
+        // See all  code................................
 
         txtseeall=view.findViewById(R.id.txt_see_all);
         txt_recommend=view.findViewById(R.id.txt_recommend);
