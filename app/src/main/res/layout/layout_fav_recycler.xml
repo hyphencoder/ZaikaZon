@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fav_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_3sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/card_img"
+               android:layout_width="@dimen/_100sdp"
+               android:layout_height="@dimen/_120sdp"
+               app:cardCornerRadius="@dimen/_10sdp"
+               app:cardElevation="2dp">
+               <ImageView
+                   android:id="@+id/img"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/img1"/>
+           </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/img_star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/card_img"
+                android:src="@drawable/baseline_star_half_24" />
+
+            <TextView
+                android:id="@+id/txt_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/img_star1"
+                android:text="4.5"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_18ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_toRightOf="@+id/txt_rating"
+                android:text="(356 review)"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/favoritebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_favorite_border_24"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/restroname"
+                android:layout_below="@+id/txt_rating"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/restroname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_star1"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/card_img"
+                android:text="Tasty Food"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_discription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/restroname"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/card_img"
+                android:text="A clear discription of restaurants.."
+                android:maxHeight="@dimen/_70sdp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/restro_locationf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_discription"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/card_img"
+                android:text="Lucknow"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/outlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_img"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Remove"
+                android:textColor="@color/colorPrimaryDark"
+                app:strokeColor="@color/colorPrimaryDark"
+                app:icon="@drawable/remove"
+                app:iconTint="@color/colorPrimaryDark"
+
+                />
+
+            <Button
+                style="@style/Widget.Material3.Button.TextButton"
+                android:id="@+id/textButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="Visit Now"
+                android:textColor="@color/textColor"
+                android:layout_below="@+id/card_img"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

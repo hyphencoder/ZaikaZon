@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchFragment">
+
+         <!--        - App Bar               -->
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/backbtns"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:contentDescription="s"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/baseline_arrow_circle_left_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Restaurants"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_22ssp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <!-- Search Bar  -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        app:cardElevation="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/linear_layout">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search restaurants....."
+            android:textColorHint="@color/textColor"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@color/backgroundColor"
+            android:textSize="@dimen/_20ssp"
+            android:inputType="text"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:drawablePadding="@dimen/_10sdp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/s_recycler"
+        android:layout_below="@+id/cardview"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"/>
+
+
+
+
+            <!-- Floating action btn -->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="View on Map"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15ssp"
+        app:icon="@drawable/baseline_navigation_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"/>
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestroScreen">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardimg2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:cardCornerRadius="@dimen/_20sdp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img1"
+            android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zaika Zon"
+        android:textColor="@color/textColor"
+        android:layout_below="@+id/cardimg2"
+        android:textSize="@dimen/_25ssp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/baseline_favorite_border_24"
+        android:layout_below="@+id/cardimg2"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_20sdp"/>
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/restro_des"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/_30sdp"
+        android:layout_below="@+id/restaurant_name"
+        android:text="A Clear Description of a Restaurants......."
+        android:layout_marginStart="@dimen/_25sdp"
+        android:textStyle="normal"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_10ssp"/>
+
+
+    <TextView
+        android:id="@+id/restrolocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lukcnow, UP 222222"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_below="@+id/restro_des"/>
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance:"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_15ssp"
+        android:layout_below="@+id/restrolocation"
+        android:layout_marginStart="@dimen/_20sdp"
+        tools:ignore="DuplicateIds" />
+    <TextView
+        android:id="@+id/distv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.2km"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_15ssp"
+        android:layout_toRightOf="@+id/distance"
+        android:layout_below="@+id/restrolocation"
+        android:layout_marginStart="@dimen/_20sdp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/reviewRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distance"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp">
+        <TextView
+            android:id="@+id/txtReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"/>
+
+        <Button
+            android:id="@+id/addReviewBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Review"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewRelative"
+        android:layout_marginHorizontal="@dimen/_20sdp"/>
+
+
+
+
+    <!-- Floating action btn -->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="View on Map"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15ssp"
+        app:icon="@drawable/baseline_navigation_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"/>
+
+
+</RelativeLayout>
