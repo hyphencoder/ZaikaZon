@@ -1,4 +1,4 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hyphencoder.zaikazon.Model.RestroModel2;
+import com.hyphencoder.zaikazon.R;
+import com.hyphencoder.zaikazon.Activity.RestroScreen;
 
 import java.util.List;
 
@@ -43,7 +47,7 @@ public class RestroModelAdapter2 extends RecyclerView.Adapter<RestroModelAdapter
         holder.cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,RestroScreen.class);
+                Intent intent=new Intent(context, RestroScreen.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

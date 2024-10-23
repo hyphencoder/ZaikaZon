@@ -1,4 +1,4 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +22,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.hyphencoder.zaikazon.Activity.MainActivity;
+import com.hyphencoder.zaikazon.R;
+import com.hyphencoder.zaikazon.Activity.Recommended;
+import com.hyphencoder.zaikazon.Model.RestroModel;
+import com.hyphencoder.zaikazon.Model.RestroModel2;
+import com.hyphencoder.zaikazon.Adapter.RestroModelAdapter;
+import com.hyphencoder.zaikazon.Adapter.RestroModelAdapter2;
+import com.hyphencoder.zaikazon.Model.TopRecyclerModel;
+import com.hyphencoder.zaikazon.Adapter.TopRecyclerModelAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

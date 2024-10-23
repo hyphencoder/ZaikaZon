@@ -1,13 +1,12 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Model;
 
-public class RestroModel2 {
+public class RestroModel {
     String id, name, desc, location, imageUrl, time,categoryId;
 
-
-    public RestroModel2() {
+    public RestroModel() {
     }
 
-    public RestroModel2(String id, String name, String desc, String location, String imageUrl, String time, String categoryId) {
+    public RestroModel(String id, String name, String desc, String location, String imageUrl, String time, String categoryId) {
         this.id = id;
         this.name = name;
         this.desc = desc;

@@ -1,22 +1,18 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.hyphencoder.zaikazon.Fragment.FavoriteFragment;
+import com.hyphencoder.zaikazon.Fragment.HomeFragment;
+import com.hyphencoder.zaikazon.Fragment.ProfileFragment;
+import com.hyphencoder.zaikazon.R;
+import com.hyphencoder.zaikazon.Fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
 

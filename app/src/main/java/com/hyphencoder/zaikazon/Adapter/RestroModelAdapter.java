@@ -1,20 +1,20 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.window.SplashScreen;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.hyphencoder.zaikazon.Model.RestroModel;
+import com.hyphencoder.zaikazon.R;
+import com.hyphencoder.zaikazon.Activity.RestroScreen;
 
 import java.util.List;
 

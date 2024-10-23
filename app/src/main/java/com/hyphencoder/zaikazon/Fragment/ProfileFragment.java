@@ -1,4 +1,4 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.hyphencoder.zaikazon.Activity.EditProfile;
+import com.hyphencoder.zaikazon.Activity.Login;
+import com.hyphencoder.zaikazon.Activity.MainActivity;
+import com.hyphencoder.zaikazon.R;
 
 public class ProfileFragment extends Fragment {
 
@@ -53,7 +58,7 @@ public class ProfileFragment extends Fragment {
         edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(),EditProfile.class);
+                Intent intent = new Intent(getContext(), EditProfile.class);
                 startActivity(intent);
             }
         });

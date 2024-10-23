@@ -1,4 +1,4 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.hyphencoder.zaikazon.Model.RestroScreenModel;
+import com.hyphencoder.zaikazon.R;
 
 import java.util.List;
 

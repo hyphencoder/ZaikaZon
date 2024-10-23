@@ -1,4 +1,4 @@
-package com.hyphencoder.zaikazon;
+package com.hyphencoder.zaikazon.Model;
 
 public class TopRecyclerModel {
     String id,  name,  imageUrl,time;

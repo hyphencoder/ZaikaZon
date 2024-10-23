@@ -7,7 +7,7 @@
     android:padding="@dimen/_15sdp"
     android:gravity="center"
     android:background="@color/colorBackground"
-    tools:context=".ReviewActivity">
+    tools:context=".Activity.ReviewActivity">
 
     <!-- Title -->
     <TextView
