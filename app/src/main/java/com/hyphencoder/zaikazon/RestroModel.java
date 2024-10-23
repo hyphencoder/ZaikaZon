@@ -1,39 +1,74 @@
 package com.hyphencoder.zaikazon;
 
 public class RestroModel {
+    String id, name, desc, location, imageUrl, time,categoryId;
 
-   String img;
-   String restoname;
-   String address;
-
-
-    public RestroModel(String img, String restoname, String address) {
-        this.img = img;
-        this.restoname = restoname;
-        this.address = address;
+    public RestroModel() {
     }
 
-    public String getImg() {
-        return img;
+    public RestroModel(String id, String name, String desc, String location, String imageUrl, String time, String categoryId) {
+        this.id = id;
+        this.name = name;
+        this.desc = desc;
+        this.location = location;
+        this.imageUrl = imageUrl;
+        this.time = time;
+        this.categoryId = categoryId;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public String getId() {
+        return id;
     }
 
-    public String getRestoname() {
-        return restoname;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setRestoname(String restoname) {
-        this.restoname = restoname;
+    public String getName() {
+        return name;
     }
 
-    public String getAddress() {
-        return address;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 }

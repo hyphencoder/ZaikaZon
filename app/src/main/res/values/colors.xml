@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#F45928</color>
-    <color name="colorAccent">#FF0101</color>
-    <color name="backgroundColor">#FFFFFF</color>
-    <color name="blue">#FF0036F8</color>
-    <color name="textColor">#000000</color>
+    <color name="colorPrimary">#FF9800</color>       <!-- Main orange -->
+    <color name="colorPrimaryDark">#F57C00</color>   <!-- Darker shade of orange for app bar, status bar -->
+    <color name="colorAccent">#4CAF50</color>        <!-- Green for secondary elements like FABs, links, etc. -->
+
+    <!-- Background and text colors -->
+    <color name="colorBackground">#FFFFFF</color>    <!-- White background for light mode -->
+    <color name="colorTextPrimary">#212121</color>   <!-- Dark gray for main text -->
+    <color name="colorTextSecondary">#757575</color> <!-- Lighter gray for secondary text -->
+    <color name="iconcolor">#FFFFFF</color>      <!--  Icon color-->
+    <!-- Error color -->
+    <color name="colorError">#F44336</color>
 </resources>

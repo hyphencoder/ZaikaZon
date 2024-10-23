@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF000000</color>
-    <color name="colorPrimaryDark">#94FF5724</color>
-    <color name="colorAccent">#FF0101</color>
-    <color name="backgroundColor">#FF000000</color>
-    <color name="blue">#FF0036F8</color>
-    <color name="textColor">#FFFFFF</color>
+    <!-- Primary colors for dark mode -->
+    <color name="colorPrimary">#FF9800</color>       <!-- Keep primary orange the same -->
+    <color name="colorPrimaryDark">#F57C00</color>   <!-- Darker orange remains the same -->
+    <color name="colorAccent">#4CAF50</color>        <!-- Accent remains the same -->
+
+    <!-- Dark mode background and text colors -->
+    <color name="colorBackground">#121212</color>    <!-- Dark background for dark mode -->
+    <color name="colorTextPrimary">#FFFFFF</color>   <!-- White text for readability on dark background -->
+    <color name="colorTextSecondary">#BDBDBD</color> <!-- Light gray for secondary text -->
+    <color name="iconcolor">#FFFFFF</color>
+    <!-- Error color -->
+    <color name="colorError">#CF6679</color>
 </resources>

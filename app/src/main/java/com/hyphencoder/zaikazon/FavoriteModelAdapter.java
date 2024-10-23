@@ -48,7 +48,7 @@ public class FavoriteModelAdapter extends RecyclerView.Adapter<FavoriteModelAdap
             img=itemView.findViewById(R.id.img);
             favoritebtn=itemView.findViewById(R.id.favoritebtn);
             restroname=itemView.findViewById(R.id.restroname);
-            restrodis=itemView.findViewById(R.id.txt_Description);
+            restrodis=itemView.findViewById(R.id.restro_Description);
             restrolocation=itemView.findViewById(R.id.restro_locationf);
         }
     }

@@ -19,12 +19,15 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigate"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="65dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimaryDark"
-        app:itemIconTint="@color/textColor"
-        app:itemTextColor="@color/textColor"
-        app:labelVisibilityMode="labeled"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:background="@drawable/bottom_shape"
+        android:elevation="0dp"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/bottom_select_color"
+        app:itemTextColor="@color/bottom_select_color"
         app:menu="@menu/bottom_menu" />
 
 

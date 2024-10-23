@@ -48,18 +48,6 @@ public class Recommended extends AppCompatActivity {
 
         recommend_recycler=findViewById(R.id.recommend_recycler);
 
-        List<RestroModel> restroModelList=new ArrayList<>();
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-
-        recommend_recycler.setLayoutManager(new GridLayoutManager(Recommended.this,2));
-
-        RestroModelAdapter restroModelAdapter=new RestroModelAdapter(Recommended.this,restroModelList);
-        recommend_recycler.setAdapter(restroModelAdapter);
 
 
     }

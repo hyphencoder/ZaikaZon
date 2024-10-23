@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-09-13T09:48:55.469718300Z">
+        <DropdownSelection timestamp="2024-10-22T12:08:31.965438200Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="Default" identifier="serial=192.168.137.21:5555;connection=fea0002d" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\omaur\.android\avd\HyphenCoder.avd" />
             </handle>
           </Target>
         </DropdownSelection>

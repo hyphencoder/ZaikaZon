@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color when the EditText is focused -->
+    <item android:color="@color/iconcolor" android:state_focused="false" />
+    <!-- Color when the EditText is not focused -->
+    <item android:color="@color/colorTextPrimary" />
+</selector>

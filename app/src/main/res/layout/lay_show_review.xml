@@ -2,12 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/relative_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
         android:layout_marginHorizontal="@dimen/_20sdp">
 
         <androidx.cardview.widget.CardView
@@ -30,7 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="UserName"
-            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextPrimary"
             android:textSize="@dimen/_15ssp"
             android:layout_toRightOf="@+id/cardviewimg"
             android:layout_marginStart="@dimen/_20sdp"
@@ -41,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2 days ago"
-            android:textColor="@color/textColor"
+            android:textColor="@color/colorTextSecondary"
             android:textSize="@dimen/_10ssp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/_5sdp"
@@ -57,7 +60,9 @@
             android:numStars="5"
             android:scaleX="0.5"
             android:scaleY="0.5"
-            android:stepSize="1.0" />
+            android:stepSize="1.0"
+            android:progressTint="@color/colorPrimary"
+            android:progressBackgroundTint="@color/colorTextSecondary"/>
 
 
     </RelativeLayout>
@@ -69,9 +74,10 @@
         android:layout_below="@+id/relative_layout"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:textSize="@dimen/_15ssp"
-        android:textColor="@color/textColor"
+        android:textColor="@color/colorTextPrimary"
         android:text="All Given review is here...."
-        android:minHeight="@dimen/_70sdp"/>
+        android:paddingStart="@dimen/_5sdp"
+        android:maxHeight="@dimen/_70sdp"/>
 
 
 </RelativeLayout>

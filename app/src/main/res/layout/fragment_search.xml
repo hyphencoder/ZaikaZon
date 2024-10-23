@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
+    android:background="@color/colorBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SearchFragment">
 
@@ -16,13 +16,14 @@
         android:orientation="horizontal"
         android:paddingTop="@dimen/_5sdp"
         android:paddingBottom="@dimen/_5sdp"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimary">
 
         <ImageView
             android:id="@+id/backbtns"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:contentDescription="s"
+            app:tint="@color/iconcolor"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_10sdp"
             android:src="@drawable/baseline_arrow_circle_left_24"/>
@@ -31,8 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Search Restaurants"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/_22ssp"
+            android:textColor="@color/iconcolor"
+            android:textSize="@dimen/_20ssp"
             android:layout_marginStart="@dimen/_30sdp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -55,9 +56,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Search restaurants....."
-            android:textColorHint="@color/textColor"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
             android:layout_marginStart="@dimen/_10sdp"
-            android:background="@color/backgroundColor"
+            android:background="@color/colorBackground"
             android:textSize="@dimen/_20ssp"
             android:inputType="text"
             android:drawableStart="@drawable/baseline_search_24"
@@ -82,11 +84,12 @@
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorPrimary"
         android:text="View on Map"
-        android:textColor="@color/textColor"
+        android:textColor="@color/iconcolor"
         android:textStyle="bold"
         android:textSize="@dimen/_15ssp"
+        app:iconTint="@color/iconcolor"
         app:icon="@drawable/baseline_navigation_24"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"

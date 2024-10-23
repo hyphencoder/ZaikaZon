@@ -1,12 +1,15 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.ZaikaZon" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/backgroundColor</item>
-        <item name="colorOnPrimary">@color/textColor</item>
-        <item name="colorSecondary">@color/backgroundColor</item>
-        <item name="colorOnSecondary">@color/textColor</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <!-- Primary theme colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Background and text colors -->
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
     </style>
     <style name="Theme.ZaikaZon" parent="Base.Theme.ZaikaZon" />
 </resources>

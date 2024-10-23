@@ -54,24 +54,24 @@ public class SearchFragment extends Fragment {
 
 
         // Recycler view ....
-
-        s_recycler=view.findViewById(R.id.s_recycler);
-
-        List<RestroModel2> restroModel2List=new ArrayList<>();
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-
-        s_recycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
-        RestroModelAdapter2 restroModelAdapter2=new RestroModelAdapter2(getContext(),restroModel2List);
-        s_recycler.setAdapter(restroModelAdapter2);
+//
+//        s_recycler=view.findViewById(R.id.s_recycler);
+//
+//        List<RestroModel2> restroModel2List=new ArrayList<>();
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
+//
+//        s_recycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+//        RestroModelAdapter2 restroModelAdapter2=new RestroModelAdapter2(getContext(),restroModel2List);
+//        s_recycler.setAdapter(restroModelAdapter2);
 
         return  view;
     }

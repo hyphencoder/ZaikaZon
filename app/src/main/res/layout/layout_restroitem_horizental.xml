@@ -9,11 +9,12 @@
         android:id="@+id/cardview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/backgroundColor">
+        app:cardBackgroundColor="@color/colorBackground">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground">
 
 
             <androidx.cardview.widget.CardView
@@ -38,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
+                app:tint="@color/colorPrimary"
                 android:layout_toRightOf="@+id/imgcard"
                 android:src="@drawable/baseline_star_half_24" />
 
@@ -49,7 +51,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_toRightOf="@+id/img_star1"
                 android:text="4.5"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
 
@@ -60,7 +62,7 @@
                 android:layout_marginTop="@dimen/_13sdp"
                 android:layout_toRightOf="@+id/txt_rating"
                 android:text="(356 review)"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="normal" />
 
@@ -70,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_favorite_border_24"
                 android:layout_alignParentEnd="true"
+                app:tint="@color/colorTextPrimary"
                 android:layout_margin="@dimen/_20sdp"/>
 
             <TextView
@@ -80,7 +83,7 @@
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/imgcard"
                 android:text="Tasty Food"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextPrimary"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
 
@@ -92,7 +95,7 @@
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/imgcard"
                 android:text="A clear discription of restaurants.."
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
             <TextView
@@ -103,11 +106,10 @@
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/imgcard"
                 android:text="Lucknow"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextPrimary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
 
 </RelativeLayout>

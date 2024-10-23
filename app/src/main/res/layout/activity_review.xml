@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:padding="@dimen/_15sdp"
     android:gravity="center"
+    android:background="@color/colorBackground"
     tools:context=".ReviewActivity">
 
     <!-- Title -->
@@ -17,7 +18,7 @@
         android:textSize="@dimen/_24ssp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textColor="@color/textColor"
+        android:textColor="@color/colorTextPrimary"
         android:layout_gravity="center"/>
 
     <!-- Rating Bar -->
@@ -27,7 +28,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
         android:numStars="5"
-        android:stepSize="1.0"/>
+        android:stepSize="1.0"
+        android:progressTint="@color/colorPrimary"
+        android:progressBackgroundTint="@color/colorTextSecondary"
+        />
 
     <!-- Feedback Input -->
     <EditText
@@ -36,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
         android:hint="Write your feedback here..."
-        android:textColorHint="@color/textColor"
+        android:textColorHint="@color/colorTextSecondary"
         android:background="@drawable/review_back"
         android:minHeight="@dimen/_100sdp"
         android:gravity="top"
@@ -46,10 +50,12 @@
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="20dp"
         android:text="Submit Feedback"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@color/colorPrimaryDark"/>
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:textColor="@color/iconcolor"
+        android:backgroundTint="@color/colorPrimary"/>
 
 </LinearLayout>

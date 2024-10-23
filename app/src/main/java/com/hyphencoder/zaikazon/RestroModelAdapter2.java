@@ -36,8 +36,9 @@ public class RestroModelAdapter2 extends RecyclerView.Adapter<RestroModelAdapter
     public void onBindViewHolder(@NonNull RestroModelAdapter2.ViewHolder holder, int position) {
         RestroModel2 restroModel2 = restroModel2List.get(position);
 
-        holder.restaurant_name.setText(restroModel2.getRestroname());
-        holder.restro_location.setText(restroModel2.getRestrolocation());
+        holder.restaurant_name.setText(restroModel2.getName());
+        holder.restro_location.setText(restroModel2.getLocation());
+        holder.res_desc.setText(restroModel2.getDesc());
 
         holder.cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +58,7 @@ public class RestroModelAdapter2 extends RecyclerView.Adapter<RestroModelAdapter
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView img1;
-        TextView restaurant_name;
+        TextView restaurant_name, res_desc;
         TextView restro_location;
         CardView cardView1;
         public ViewHolder(@NonNull View itemView) {
@@ -65,6 +66,7 @@ public class RestroModelAdapter2 extends RecyclerView.Adapter<RestroModelAdapter
             img1=itemView.findViewById(R.id.img1);
             restaurant_name=itemView.findViewById(R.id.restaurant_name);
             restro_location=itemView.findViewById(R.id.restro_locationH);
+            res_desc= itemView.findViewById(R.id.txt_discription);
             cardView1=itemView.findViewById(R.id.cardview1);
         }
     }

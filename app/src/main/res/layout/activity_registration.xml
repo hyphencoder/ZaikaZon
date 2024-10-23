@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".Registration">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -30,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome! to"
-            android:textColor="@color/textColor"
+            android:textColor="@color/colorTextPrimary"
             android:textSize="@dimen/_25ssp"
             android:textStyle="bold" />
 
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:text="Zaika Zon"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/_25ssp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -47,20 +48,21 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtname"
-        android:layout_below="@+id/linear_layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/colorPrimaryDark"
-        app:hintTextColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/linear_layout1"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Enter Your Name..">
+        android:hint="Enter Your Name.."
+        android:textColorHint="@color/colorTextPrimary"
+        app:boxStrokeColor="@color/edit_selecter"
+        app:hintTextColor="@color/hint_selector">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enter_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,90 +72,93 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtname"
-        app:boxStrokeColor="@color/colorPrimaryDark"
-        app:hintTextColor="@color/colorPrimaryDark"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Enter Your Email..">
+        android:hint="Enter Your Email.."
+        android:textColorHint="@color/colorTextPrimary"
+        app:boxStrokeColor="@color/edit_selecter"
+        app:hintTextColor="@color/hint_selector">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enter_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtnumber"
-        android:layout_below="@id/txtemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/colorPrimaryDark"
-        app:hintTextColor="@color/colorPrimaryDark"
+        android:layout_below="@id/txtemail"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Enter Your Number..">
+        android:hint="Enter Your Number.."
+        android:textColorHint="@color/colorTextPrimary"
+        app:boxStrokeColor="@color/edit_selecter"
+        app:hintTextColor="@color/hint_selector">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enter_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtpassword"
-        android:layout_below="@id/txtnumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/colorPrimaryDark"
-        app:hintTextColor="@color/colorPrimaryDark"
+        android:layout_below="@id/txtnumber"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Enter Your Password..">
+        android:hint="Enter Your Password.."
+        android:textColorHint="@color/colorTextPrimary"
+        app:boxStrokeColor="@color/edit_selecter"
+        app:hintTextColor="@color/hint_selector">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enter_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:inputType="textVisiblePassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtCpassword"
-        android:layout_below="@id/txtpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/colorPrimaryDark"
-        app:hintTextColor="@color/colorPrimaryDark"
+        android:layout_below="@id/txtpassword"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Confirm your Password..">
+        android:hint="Confirm your Password.."
+        android:textColorHint="@color/colorTextPrimary"
+        app:boxStrokeColor="@color/edit_selecter"
+        app:hintTextColor="@color/hint_selector">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enter_cpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:inputType="textVisiblePassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+    <Button
         android:id="@+id/btn_Register"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/_120sdp"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtCpassword"
-        android:layout_marginHorizontal="@dimen/_70sdp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_15sdp"
-        android:background="@drawable/btn_back"
-        android:gravity="center"
+        android:backgroundTint="@color/colorPrimary"
         android:text="Register"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/_20ssp"
-        android:textStyle="bold" />
+        android:textColor="@color/iconcolor"
+        android:textSize="@dimen/_20ssp" />
+
 
     <TextView
         android:id="@+id/login_with"
@@ -163,7 +168,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_5sdp"
         android:text="or Login with"
-        android:textColor="@color/textColor"
+        android:textColor="@color/colorTextSecondary"
         android:textSize="@dimen/_15ssp"
         android:textStyle="bold" />
 
@@ -187,8 +192,8 @@
             android:id="@+id/img_google"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/google"
-            android:layout_marginStart="@dimen/_10sdp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/google" />
 
     </LinearLayout>
 
@@ -206,7 +211,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already registered?"
-            android:textColor="@color/textColor"
+            android:textColor="@color/colorTextPrimary"
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
 
@@ -216,7 +221,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             android:text="Login Here"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/_15ssp"
             android:textStyle="bold" />
     </LinearLayout>

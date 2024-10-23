@@ -48,6 +48,17 @@ public class HomeFragment extends Fragment {
 
         // Search .....
         search=view.findViewById(R.id.search);
+        txtseeall2=view.findViewById(R.id.txt_see_all2);
+        txt_nearby=view.findViewById(R.id.txt_nearby);
+        toprecycler=view.findViewById(R.id.toprecycler);
+        txtseeall=view.findViewById(R.id.txt_see_all);
+        txt_recommend=view.findViewById(R.id.txt_recommend);
+        restrorecycler=view.findViewById(R.id.restrorecycler);
+        restrorecycler2=view.findViewById(R.id.restrorecycler2);
+
+
+
+        // serachbar ke click pr ....
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +66,7 @@ public class HomeFragment extends Fragment {
                 SearchFragment fragmentB = new SearchFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.fragment_container_view, fragmentB);
-                transaction.addToBackStack(null); // Optional: Add to back stack
+                transaction.addToBackStack(null);
                 transaction.commit();
 
                 MainActivity.bottom_navigate.setSelectedItemId(R.id.search);
@@ -63,13 +74,9 @@ public class HomeFragment extends Fragment {
         });
 
         // Top recycler....
-        toprecycler=view.findViewById(R.id.toprecycler);
           showData();
 
-        // See all  code................................
-
-        txtseeall=view.findViewById(R.id.txt_see_all);
-        txt_recommend=view.findViewById(R.id.txt_recommend);
+        // See all  code...
         txtseeall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,26 +88,9 @@ public class HomeFragment extends Fragment {
         });
 
         // First Recycler view ....
+         restroShow();
 
-        restrorecycler=view.findViewById(R.id.restrorecycler);
-
-        List<RestroModel> restroModelList=new ArrayList<>();
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-        restroModelList.add(new RestroModel("","Zaika Zon","Lucknow"));
-
-        restrorecycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL, false));
-
-        RestroModelAdapter restroModelAdapter=new RestroModelAdapter(getContext(),restroModelList);
-        restrorecycler.setAdapter(restroModelAdapter);
-
-        // Second see all  activity........
-
-        txtseeall2=view.findViewById(R.id.txt_see_all2);
-        txt_nearby=view.findViewById(R.id.txt_nearby);
+        // Second see all  activity .......
         txtseeall2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,25 +101,9 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        //Second recycler view
+        //Second recycler view .....
+        nearbyRestroShow();
 
-        restrorecycler2=view.findViewById(R.id.restrorecycler2);
-
-        List<RestroModel2> restroModel2List=new ArrayList<>();
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-        restroModel2List.add(new RestroModel2("", "Zaika Zon","Lucknow"));
-
-        restrorecycler2.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
-        RestroModelAdapter2 restroModelAdapter2=new RestroModelAdapter2(getContext(),restroModel2List);
-        restrorecycler2.setAdapter(restroModelAdapter2);
 
         return view;
     }
@@ -161,6 +135,82 @@ public class HomeFragment extends Fragment {
                     toprecycler.setAdapter(adapter);
 
                     toprecycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+                }else {
+                    Log.d("Database Refrences", "Snapshot not exixts");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(getContext(), "Data NOt Show", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    // Restraurants ke data show krane ke liye.....
+    void restroShow(){
+        FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference=firebaseDatabase.getReference("Restaurant Name");
+
+        List<RestroModel> restroModelList=new ArrayList<>();
+
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    Log.d("Database Refrences", "Snapshot Exists");
+
+                    restroModelList.clear();
+
+                    for(DataSnapshot snapshot1:snapshot.getChildren()){
+                        RestroModel restroModel=snapshot1.getValue(RestroModel.class);
+                        restroModelList.add(restroModel);
+                    }
+
+                    RestroModelAdapter adapter=new RestroModelAdapter(getContext(),restroModelList);
+                    restrorecycler.setAdapter(adapter);
+
+                    restrorecycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+                }else {
+                    Log.d("Database Refrences", "Snapshot not exixts");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(getContext(), "Data NOt Show", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+    void nearbyRestroShow(){
+        FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference=firebaseDatabase.getReference("Restaurant Name");
+
+        List<RestroModel2> restroModel2List=new ArrayList<>();
+
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    Log.d("Database Refrences", "Snapshot Exists");
+
+                    restroModel2List.clear();
+
+                    for(DataSnapshot snapshot1:snapshot.getChildren()){
+                        RestroModel2 restroModel2=snapshot1.getValue(RestroModel2.class);
+                        restroModel2List.add(restroModel2);
+                    }
+
+                    RestroModelAdapter2 adapter=new RestroModelAdapter2(getContext(),restroModel2List);
+                    restrorecycler2.setAdapter(adapter);
+
+                    restrorecycler2.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
                 }else {
                     Log.d("Database Refrences", "Snapshot not exixts");
                 }

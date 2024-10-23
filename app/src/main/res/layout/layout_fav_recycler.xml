@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -13,6 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/colorBackground"
             android:padding="@dimen/_10sdp">
 
            <androidx.cardview.widget.CardView
@@ -36,6 +38,7 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/card_img"
+                app:tint="@color/colorPrimary"
                 android:src="@drawable/baseline_star_half_24" />
 
             <TextView
@@ -46,7 +49,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_toRightOf="@+id/img_star1"
                 android:text="4.5"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_18ssp"
                 android:textStyle="bold" />
 
@@ -57,7 +60,7 @@
                 android:layout_marginTop="@dimen/_13sdp"
                 android:layout_toRightOf="@+id/txt_rating"
                 android:text="(356 review)"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="normal" />
 
@@ -80,7 +83,7 @@
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/card_img"
                 android:text="Tasty Food"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextPrimary"
                 android:textSize="@dimen/_20ssp"
                 android:textStyle="bold" />
 
@@ -93,7 +96,7 @@
                 android:layout_toRightOf="@+id/card_img"
                 android:text="A clear discription of restaurants.."
                 android:maxHeight="@dimen/_70sdp"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
             <TextView
@@ -104,7 +107,7 @@
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_toRightOf="@+id/card_img"
                 android:text="Lucknow"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextPrimary"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold"
                 android:layout_marginTop="@dimen/_5sdp"/>
@@ -118,24 +121,23 @@
                 android:layout_below="@+id/card_img"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:text="Remove"
-                android:textColor="@color/colorPrimaryDark"
-                app:strokeColor="@color/colorPrimaryDark"
+                android:backgroundTint="@color/colorTextSecondary"
+                android:textColor="@color/colorTextPrimary"
                 app:icon="@drawable/remove"
-                app:iconTint="@color/colorPrimaryDark"
+                app:iconTint="@color/colorTextPrimary"
 
                 />
 
             <Button
-                style="@style/Widget.Material3.Button.TextButton"
                 android:id="@+id/textButton"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_80sdp"
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/_10sdp"
                 android:paddingEnd="@dimen/_10sdp"
                 android:text="Visit Now"
-                android:textColor="@color/textColor"
+                android:textColor="@color/iconcolor"
                 android:layout_below="@+id/card_img"
-                android:backgroundTint="@color/colorPrimaryDark"
+                android:backgroundTint="@color/colorPrimary"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="@dimen/_20sdp"
                 />

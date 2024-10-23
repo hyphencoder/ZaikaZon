@@ -8,7 +8,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview12"
-        android:background="@color/backgroundColor"
+        android:background="@color/colorBackground"
         android:layout_width="wrap_content"
         android:paddingStart="@dimen/_5sdp"
         android:paddingEnd="@dimen/_5sdp"
@@ -22,47 +22,56 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@color/backgroundColor"
+            android:background="@color/colorBackground"
             android:gravity="center">
-            <ImageView
-                android:id="@+id/img1"
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_100sdp"
-                android:scaleType="fitXY"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/img1" />
+           <androidx.cardview.widget.CardView
+               android:id="@+id/cardimageres"
+               android:layout_width="@dimen/_100sdp"
+               android:layout_height="@dimen/_100sdp"
+               android:layout_centerHorizontal="true"
+               app:cardCornerRadius="@dimen/_10sdp"
+               app:cardElevation="@dimen/_2sdp">
+               <ImageView
+                   android:id="@+id/img1"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:scaleType="fitXY"
+                   android:layout_centerHorizontal="true"
+                   android:src="@drawable/img1" />
+           </androidx.cardview.widget.CardView>
 
             <ImageView
                 android:id="@+id/img_star"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img1"
+                android:layout_below="@+id/cardimageres"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:scaleType="fitXY"
+                app:tint="@color/colorPrimary"
                 android:src="@drawable/baseline_star_half_24" />
 
             <TextView
                 android:id="@+id/txt_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/img1"
+                android:layout_below="@id/cardimageres"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_toRightOf="@+id/img_star"
                 android:text="4.5"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/img1"
+                android:layout_below="@id/cardimageres"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_toRightOf="@+id/txt_rating"
                 android:text="(356 review)"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="normal" />
 
@@ -73,7 +82,7 @@
                 android:layout_below="@id/img_star"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:text="Tasty Food"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextPrimary"
                 android:textSize="@dimen/_15ssp"
                 android:textStyle="bold" />
 
@@ -81,19 +90,20 @@
                 android:id="@+id/favoritebtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:tint="@color/colorTextPrimary"
                 android:src="@drawable/baseline_favorite_border_24"
                 android:layout_toRightOf="@+id/restaurant_name"
                 android:layout_below="@+id/txt_rating"
                 android:layout_marginStart="@dimen/_10sdp"/>
 
             <TextView
-                android:id="@+id/txt_Description"
+                android:id="@+id/restro_Description"
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="wrap_content"
                 android:maxHeight="@dimen/_30sdp"
                 android:text="A clear Description of Restaurants....."
                 android:overScrollMode="always"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextSecondary"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_below="@+id/restaurant_name"/>
 
@@ -102,11 +112,11 @@
                 android:id="@+id/restro_loaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txt_Description"
+                android:layout_below="@id/restro_Description"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:text="Lucknow, UP"
-                android:textColor="@color/textColor"
+                android:textColor="@color/colorTextPrimary"
                 android:textSize="@dimen/_10ssp"
                 android:textStyle="bold" />
         </RelativeLayout>
