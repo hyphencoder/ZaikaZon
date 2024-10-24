@@ -7,207 +7,230 @@
     android:layout_height="match_parent"
     tools:context=".Activity.Login">
 
-    <!--    Image Logo  -->
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imglogo"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_200sdp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo2" />
-
-    <!--       Welcome to Zaika Zon     -->
-    <TextView
-        android:id="@+id/txtwelcome"
+<!-- Scroll View -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imglogo"
-        android:layout_marginTop="-40dp"
-        android:gravity="center"
-        android:text="Welcome!"
-        android:textColor="@color/colorTextPrimary"
-        android:textSize="@dimen/_30ssp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linear_layout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtwelcome"
-        android:layout_centerHorizontal="true"
-        android:layout_marginHorizontal="@dimen/_15sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:text="to"
-            android:textColor="@color/colorTextPrimary"
-            android:textSize="@dimen/_30ssp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:text="Zaika Zon"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/_30ssp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <!--     Email edit text   -->
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/log_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linear_layout1"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Enter Your Email.."
-        android:textColorHint="@color/colorTextPrimary"
-        app:boxStrokeColor="@color/edit_selecter"
-        app:hintTextColor="@color/hint_selector">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
+            android:layout_height="match_parent">
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <!--    Image Logo  -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imglogo"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo2" />
 
-    <!--     Password edit text   -->
+        <!--       Welcome to Zaika Zon     -->
+            <TextView
+                android:id="@+id/txtwelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imglogo"
+                android:layout_marginTop="-40dp"
+                android:gravity="center"
+                android:text="Welcome!"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/_30ssp"
+                android:textStyle="bold"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/log_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/log_email"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Enter Your Password.."
-        android:textColorHint="@color/colorTextPrimary"
-        app:boxStrokeColor="@color/edit_selecter"
-        app:endIconMode="password_toggle"
-        app:hintTextColor="@color/hint_selector">
+        <!-- Linear Layout for to zaikazon  -->
+            <LinearLayout
+                android:id="@+id/linear_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtwelcome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:text="to"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/_30ssp"
+                    android:textStyle="bold" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Zaika Zon"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_30ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-    <!--     Login Btn  -->
+        <!--     Email edit text   -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/log_emailb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_layout1"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Enter Your Email.."
+                android:textColorHint="@color/colorTextPrimary"
+                app:boxStrokeColor="@color/edit_selecter"
+                app:hintTextColor="@color/hint_selector">
 
-    <Button
-        android:id="@+id/btn_Login"
-        android:layout_width="@dimen/_150sdp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/log_password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Login"
-        android:textColor="@color/iconcolor"
-        android:textSize="@dimen/_20ssp"
-        android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/log_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxHeight="@dimen/_40sdp"/>
 
-    <TextView
-        android:id="@+id/forget_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_Login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:text="I forget my password"
-        android:textColor="@color/colorTextPrimary"
-        android:textSize="@dimen/_15ssp"
-        android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/login_with"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/forget_password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:text="or Login with"
-        android:textColor="@color/colorTextSecondary"
-        android:textSize="@dimen/_15ssp"
-        android:textStyle="bold" />
+        <!--     Password edit text   -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/log_passwordb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_emailb"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Enter Your Password.."
+                android:textColorHint="@color/colorTextPrimary"
+                app:boxStrokeColor="@color/edit_selecter"
+                app:endIconMode="password_toggle"
+                app:hintTextColor="@color/hint_selector">
 
-    <LinearLayout
-        android:id="@+id/linear_layout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_with"
-        android:layout_marginHorizontal="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/log_password"
+                    android:inputType="textPassword"
+                    android:maxHeight="@dimen/_40sdp"/>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/facebook_card"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            app:cardCornerRadius="@dimen/_15sdp"
-            app:cardElevation="@dimen/_2sdp">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageView
-                android:id="@+id/img_facebook"
+        <!--     Login Btn  -->
+            <Button
+                android:id="@+id/btn_Login"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/log_passwordb"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Login"
+                android:textColor="@color/iconcolor"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold" />
+
+        <!-- forget Password  text -->
+            <TextView
+                android:id="@+id/forget_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/facebook" />
-        </androidx.cardview.widget.CardView>
+                android:layout_below="@id/btn_Login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="I forget my password"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="normal" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/google_card"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginStart="20dp"
-            app:cardCornerRadius="@dimen/_15sdp"
-            app:cardElevation="@dimen/_2sdp">
-
-            <ImageView
-                android:id="@+id/img_google"
+        <!-- Or Login with Text -->
+            <TextView
+                android:id="@+id/login_with"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/google" />
-        </androidx.cardview.widget.CardView>
+                android:layout_below="@+id/forget_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="or Login with"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+        <!-- fb and Google logo -->
+            <LinearLayout
+                android:id="@+id/linear_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_with"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:id="@+id/linear_layout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linear_layout2"
-        android:layout_marginHorizontal="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
+            <!-- fb logo cardview -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/facebook_card"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="@dimen/_2sdp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have account?"
-            android:textColor="@color/colorTextPrimary"
-            android:textSize="@dimen/_15ssp"
-            android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/img_facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/facebook" />
+                </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:text="Register Here"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/_15ssp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            <!-- google logo cardview -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/google_card"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="20dp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="@dimen/_2sdp">
+
+                    <ImageView
+                        android:id="@+id/img_google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/google" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        <!-- Linear layout for Do you have -->
+            <LinearLayout
+                android:id="@+id/linear_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_layout2"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <!-- Do you have Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have account?"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+            <!-- Register here text -->
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Register Here"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

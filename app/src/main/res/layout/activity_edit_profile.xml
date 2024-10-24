@@ -8,144 +8,162 @@
     android:layout_height="match_parent"
     tools:context=".Activity.EditProfile">
 
-<!-- Profile Image -->
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_40sdp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/img1" />
-
-<!-- Change Photo Text -->
-    <Button
-        android:id="@+id/change_photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profile_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Change Photo"
-        android:textColor="@color/iconcolor"
-        android:textSize="@dimen/_14ssp"
-        android:textStyle="bold" />
-
-<!-- Name Input -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/change_name"
-        android:layout_below="@id/change_photo"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Change Your Name"
-        app:hintTextColor="@color/hint_selector"
-        android:textColorHint="@color/colorTextPrimary"
-        app:boxStrokeColor="@color/edit_selecter"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-<!-- Email Input -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/change_email"
-        android:layout_below="@id/change_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/edit_selecter"
-        app:hintTextColor="@color/hint_selector"
-        android:textColorHint="@color/colorTextPrimary"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Change Your Email">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground">
 
 
-<!-- Phone Number Input -->
+            <!-- Profile Image -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img1" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/change_number"
-        android:layout_below="@id/change_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/edit_selecter"
-        app:hintTextColor="@color/hint_selector"
-        android:textColorHint="@color/colorTextPrimary"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Change Your Name">
+            <!-- Change Photo Text -->
+            <Button
+                android:id="@+id/change_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Change Photo"
+                android:textColor="@color/iconcolor"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            <!-- Name Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/change_namem"
+                android:layout_below="@id/change_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Change Your Name"
+                app:hintTextColor="@color/hint_selector"
+                android:textColorHint="@color/colorTextPrimary"
+                app:boxStrokeColor="@color/edit_selecter"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/change_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    />
 
-<!-- Address  Input  -->
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/change_address"
-        android:layout_below="@id/change_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        app:boxStrokeColor="@color/edit_selecter"
-        app:hintTextColor="@color/hint_selector"
-        android:textColorHint="@color/colorTextPrimary"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:hint="Change Your Address">
+            <!-- Email Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/change_emailm"
+                android:layout_below="@id/change_namem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/edit_selecter"
+                app:hintTextColor="@color/hint_selector"
+                android:textColorHint="@color/colorTextPrimary"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Change Your Email">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/change_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    />
 
-    </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Phone Number Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/change_numberm"
+                android:layout_below="@id/change_emailm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/edit_selecter"
+                app:hintTextColor="@color/hint_selector"
+                android:textColorHint="@color/colorTextPrimary"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Change Your Number">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/change_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    />
 
-    <!-- Save and Cancel Buttons -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/change_address"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:gravity="center"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:orientation="horizontal">
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Cancel Button -->
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorTextSecondary"
-            android:text="Cancel"
-            android:textColor="@color/colorTextPrimary" />
+            <!-- Address  Input  -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/change_addressm"
+                android:layout_below="@id/change_numberm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:boxStrokeColor="@color/edit_selecter"
+                app:hintTextColor="@color/hint_selector"
+                android:textColorHint="@color/colorTextPrimary"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Change Your Address">
 
-        <!-- Save Button -->
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_40sdp"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="Save"
-            android:textColor="@color/iconcolor"/>
-    </LinearLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/change_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save and Cancel Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/change_addressm"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <!-- Cancel Button -->
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorTextSecondary"
+                    android:text="Cancel"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <!-- Save Button -->
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Save"
+                    android:textColor="@color/iconcolor"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

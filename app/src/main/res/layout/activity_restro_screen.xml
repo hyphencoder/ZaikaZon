@@ -7,11 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".Activity.RestroScreen">
 
-
-
-
-
-
+       <LinearLayout
+           android:id="@+id/lay1"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_200sdp">
+           <ImageView
+               android:id="@+id/screenImg"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_200sdp"
+               android:src="@drawable/img3"
+               android:scaleType="fitXY"
+               android:background="@drawable/rounded_shape"
+               android:clipToOutline="true"
+               />
+       </LinearLayout>
 
     <TextView
         android:id="@+id/restaurant_name"
@@ -21,23 +30,20 @@
         android:textColor="@color/colorTextPrimary"
         android:textSize="@dimen/_25ssp"
         android:textStyle="bold"
+        android:layout_below="@id/lay1"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"/>
 
 
     <ImageView
+        android:id="@+id/favbtn"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:src="@drawable/baseline_favorite_border_24"
         android:layout_marginTop="@dimen/_15sdp"
+        android:layout_below="@id/lay1"
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/_20sdp"/>
-
-
-
-
-
-
 
     <TextView
         android:id="@+id/restro_des"
@@ -92,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/distance"
-        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_5sdp">
         <TextView
             android:id="@+id/txtReview"
@@ -121,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/reviewRelative"
-        android:layout_marginHorizontal="@dimen/_20sdp"/>
+        android:layout_marginHorizontal="@dimen/_12sdp"/>
 
 
 
@@ -139,7 +145,7 @@
         app:icon="@drawable/baseline_navigation_24"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_15sdp"/>
 
 

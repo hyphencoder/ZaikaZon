@@ -91,7 +91,9 @@ public class HomeFragment extends Fragment {
                 Intent intent=new Intent(getContext(), Recommended.class);
                 txt_recommend.getText().toString();
                 intent.putExtra("data","Recommened Restaurants");
+
                 startActivity(intent);
+
             }
         });
 
@@ -118,7 +120,6 @@ public class HomeFragment extends Fragment {
 
 
 // Top recycler ka data show krane ke liye...
-
     void showData(){
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
         DatabaseReference databaseReference=firebaseDatabase.getReference("CategoryName");
@@ -156,7 +157,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
-    // Restraurants ke data show krane ke liye.....
+// Restraurants ke data show krane ke liye.....
     void restroShow(){
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
         DatabaseReference databaseReference=firebaseDatabase.getReference("Restaurant Name");
@@ -194,7 +195,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
-
+// Nearby restaurants ka data show krane ke liye....
     void nearbyRestroShow(){
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
         DatabaseReference databaseReference=firebaseDatabase.getReference("Restaurant Name");
@@ -231,4 +232,6 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
+
 }

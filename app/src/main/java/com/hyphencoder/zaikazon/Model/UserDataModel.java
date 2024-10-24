@@ -2,17 +2,26 @@ package com.hyphencoder.zaikazon.Model;
 
 public class UserDataModel {
 
-    String name, email, number, password, cpassword;
+    String id, name, email, number, password, address;
 
     public UserDataModel() {
     }
 
-    public UserDataModel(String name, String email, String number, String password, String cpassword) {
-        this.cpassword = cpassword;
-        this.password = password;
-        this.number = number;
-        this.email = email;
+    public UserDataModel(String id, String name, String email, String number, String password, String address) {
+        this.id = id;
         this.name = name;
+        this.email = email;
+        this.number = number;
+        this.password = password;
+        this.address = address;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -47,11 +56,11 @@ public class UserDataModel {
         this.password = password;
     }
 
-    public String getCpassword() {
-        return cpassword;
+    public String getAddress() {
+        return address;
     }
 
-    public void setCpassword(String cpassword) {
-        this.cpassword = cpassword;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

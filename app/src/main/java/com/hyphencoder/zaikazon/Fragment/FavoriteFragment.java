@@ -54,17 +54,6 @@ public class FavoriteFragment extends Fragment {
         //set recycler view
         frecycler=view.findViewById(R.id.frecycler);
 
-        List<FavoriteModel> favoriteModelList= new ArrayList<>();
-
-        favoriteModelList.add(new FavoriteModel("", "", "Zaikazon", "this restaurants is amazing", "Lukcnow up"));
-
-
-        FavoriteModelAdapter favoriteModelAdapter= new FavoriteModelAdapter(getContext(), favoriteModelList);
-        frecycler.setAdapter(favoriteModelAdapter);
-
-        frecycler.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false));
-
-
 
         return view;
     }

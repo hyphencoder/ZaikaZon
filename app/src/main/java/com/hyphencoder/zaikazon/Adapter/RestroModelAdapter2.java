@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.hyphencoder.zaikazon.Model.RestroModel2;
 import com.hyphencoder.zaikazon.R;
 import com.hyphencoder.zaikazon.Activity.RestroScreen;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,8 +44,8 @@ public class RestroModelAdapter2 extends RecyclerView.Adapter<RestroModelAdapter
         holder.restaurant_name.setText(restroModel2.getName());
         holder.restro_location.setText(restroModel2.getLocation());
         holder.res_desc.setText(restroModel2.getDesc());
-
-        holder.cardView1.setOnClickListener(new View.OnClickListener() {
+        Picasso.get().load(restroModel2.getImageUrl()).into(holder.img1);
+        holder.img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context, RestroScreen.class);

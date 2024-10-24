@@ -21,9 +21,6 @@
             android:name=".Activity.EditProfile"
             android:exported="false" />
         <activity
-            android:name=".Otp"
-            android:exported="false" />
-        <activity
             android:name=".Activity.ReviewActivity"
             android:exported="false" />
         <activity
@@ -49,7 +46,8 @@
         </activity>
         <activity
             android:name=".Activity.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing"/>
     </application>
 
 </manifest>

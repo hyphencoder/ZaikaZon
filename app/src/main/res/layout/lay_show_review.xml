@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/colorBackground"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="#00FFFFFF"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackground"
-        android:layout_marginHorizontal="@dimen/_20sdp">
+        android:layout_marginHorizontal="@dimen/_15sdp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardviewimg"
@@ -72,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/relative_layout"
-        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:textSize="@dimen/_15ssp"
         android:textColor="@color/colorTextPrimary"
         android:text="All Given review is here...."

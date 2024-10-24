@@ -6,6 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.hyphencoder.zaikazon.Helper.SharedPrefManager;
 import com.hyphencoder.zaikazon.R;
 
 public class splash_screen extends AppCompatActivity {
@@ -18,9 +19,18 @@ public class splash_screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(splash_screen.this, Login.class);
-                startActivity(intent);
-                finish();
+
+                if(SharedPrefManager.getInstance(splash_screen.this).checkUserLogin()){
+                    Intent intent=new Intent(splash_screen.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else {
+                    Intent intent=new Intent(splash_screen.this, Login.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+
             }
         } , 1000);
 

@@ -2,17 +2,26 @@ package com.hyphencoder.zaikazon.Model;
 
 public class FavoriteModel {
 
-    String img, favoritebtn, restroname, restrodis, restrolocation;
+    String id, img, favoritebtn, restroname, restrodis, restrolocation;
 
     public FavoriteModel() {
     }
 
-    public FavoriteModel(String img, String favoritebtn, String restroname, String restrodis, String restrolocation) {
+    public FavoriteModel(String id, String img, String favoritebtn, String restroname, String restrodis, String restrolocation) {
+        this.id = id;
         this.img = img;
         this.favoritebtn = favoritebtn;
         this.restroname = restroname;
         this.restrodis = restrodis;
         this.restrolocation = restrolocation;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getImg() {
