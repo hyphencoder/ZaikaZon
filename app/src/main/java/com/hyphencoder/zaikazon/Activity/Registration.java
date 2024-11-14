@@ -101,6 +101,7 @@ public class Registration extends AppCompatActivity {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
+
                     if (task.isSuccessful()) {
 
 

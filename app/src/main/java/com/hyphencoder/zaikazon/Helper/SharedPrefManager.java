@@ -52,7 +52,6 @@ public class SharedPrefManager {
 
         SharedPreferences sharedPreferences= context.getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
 
-
         UserDataModel userDataModel=new UserDataModel(
                 sharedPreferences.getString(KEY_ID,""),
                 sharedPreferences.getString(KEY_NAME,""),
@@ -85,9 +84,4 @@ public class SharedPrefManager {
         editor.apply();
         editor.commit();
     }
-
-
-
-
-
 }

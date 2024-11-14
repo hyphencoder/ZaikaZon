@@ -7,10 +7,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.hyphencoder.zaikazon.R;
 import com.hyphencoder.zaikazon.Model.RestroScreenModel;
 import com.hyphencoder.zaikazon.Adapter.RestroScreenModelAdapter;
@@ -18,6 +24,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.internal.cache.DiskLruCache;
 
 public class RestroScreen extends AppCompatActivity {
 
@@ -82,5 +90,25 @@ public class RestroScreen extends AppCompatActivity {
         RestroScreenModelAdapter restroScreenModelAdapter=new RestroScreenModelAdapter(RestroScreen.this, restroScreenModelList);
         reviewrecycler.setAdapter(restroScreenModelAdapter);
 
+    }
+
+    void showReviews(String restroId){
+
+        DatabaseReference dbShowReviews = FirebaseDatabase.getInstance().getReference("Reviews");
+
+        dbShowReviews.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot.exists()){
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

@@ -3,7 +3,6 @@ package com.hyphencoder.zaikazon.Model;
 public class RestroModel2 {
     String id, name, desc, location, imageUrl, time,categoryId;
 
-
     public RestroModel2() {
     }
 
